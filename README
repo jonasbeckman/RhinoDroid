@@ -28,8 +28,15 @@ You now have a workspace to type in JavaScript code and evaluate with right/midd
 squeak/Android Workspace.text
 7) Type in some java script code and run it!
 
-A JavaScript browser will also be added to RhinoDroid that allows code to be loaded from a file,
-either locally or over http.
+THE BROWSER
+
+There is also a JavaScript browser in class RhinoDroidBrowser. Edit AndroidManifest.xml to compile 
+the browser. Then upload the file javascript/Hello.js to the device/emulator and open it in the app. 
+The browser allows code to be loaded from a file, either locally or over http (has not been tested yet).
+Note that there is an open method in the activity that can be used to open another JavaScript file.
+More examples will be provided. There may be security concerns, but it is really promising to have
+a browser that allows for loading lightweight app code over the network. Welcome to the html-less
+web for Android, runing JavaScript!
 
 Have fun!
 
