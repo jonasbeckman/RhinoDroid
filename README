@@ -1,0 +1,36 @@
+INFO
+
+Experimental "web server" that acceps PUT-requests with JavaScript code as content.
+The server evaluates the JavaScript code using the Rhino engine.
+Copyright (c) 2009 Mikael Kindborg mikael.kindborg@gmail.com
+Licence: MIT
+
+HOW TO
+
+Modify local.properties to point to your Android SDK, alter this line:
+sdk.dir=/Users/miki/android/android-sdk-mac
+
+Compile and upload to emulator/device with the command:
+ant install
+
+To evaluate code, you must send it to the device using an HTP PUT request.
+There is a Squeak workspace that does this. Do as follows:
+1) Download Squeak from: http://www.squeak.org
+2) Open the Squeak image
+3) Left click on the background, select open/file list, then file in
+the file squeak/Android-Workspace.st
+4) Select open/workspace in the background menu, then type:
+AndroidWorkspace new open
+Then select the text with the mouse then right click (or middle click) and select do it in the menu
+You now have a workspace to type in JavaScript code and evaluate with right/middle click Run on Android
+5) Make sure the RhinoDroidServer is running on the emulator
+6) Create a port forwarding using the commands that are found at the start of the file 
+squeak/Android Workspace.text
+7) Type in some java script code and run it!
+
+A JavaScript browser will also be added to RhinoDroid that allows code to be loaded from a file,
+either locally or over http.
+
+Have fun!
+
+Micke (^_^)
