@@ -1,7 +1,6 @@
 package miki.rhinodroid;
 
 import android.app.*;
-import android.content.*;
 import android.graphics.Color;
 import android.os.*;
 import android.widget.*;

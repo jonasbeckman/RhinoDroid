@@ -5,39 +5,63 @@ The server evaluates the JavaScript code using the Rhino engine.
 Copyright (c) 2009 Mikael Kindborg mikael.kindborg@gmail.com
 Licence: MIT
 
-HOW TO
+HOW TO INSTALL
 
-Modify local.properties to point to your Android SDK, alter this line:
+First modify local.properties to point to your Android SDK, alter this line:
 sdk.dir=/Users/miki/android/android-sdk-mac
 
-Compile and upload to emulator/device with the command:
-ant install
+Then compile and upload to emulator/device. 
+
+Either use the command line:
+
+- ant install
+
+Or use Eclipse:
+
+- File->New Project->Other->Android->Create project from existing source
+- Browse to where you downloaded the source and click through the wizard
+- Open project properties and add /libs/rhino_7R2.jar to build path
+- Right-click on project and select run Debug as->Android project
+- Wait for the emulator to come up 
+
+HOW TO RUN THE JAVASCRIPT SERVER
+
+1) First make sure the RhinoDroidServer is really running on the emulator
+2) Create a port forwarding using the commands found at the start of the file 
+squeak/Android Workspace.text. It should look like this (port numbers might be different):
+
+telnet localhost 5554
+redir add tcp:4042:4042
+quit
+
+Run this from your ordinary command line. You now have a server that can execute Javascript.
 
 To evaluate code, you must send it to the device using an HTP PUT request.
-There is a Squeak workspace that does this. Do as follows:
-1) Download Squeak from: http://www.squeak.org
-2) Open the Squeak image
-3) Left click on the background, select open/file list, then file in
-the file squeak/Android-Workspace.st
-4) Select open/workspace in the background menu, then type:
-AndroidWorkspace new open
-Then select the text with the mouse then right click (or middle click) and select do it in the menu
-You now have a workspace to type in JavaScript code and evaluate with right/middle click Run on Android
-5) Make sure the RhinoDroidServer is running on the emulator
-6) Create a port forwarding using the commands that are found at the start of the file 
-squeak/Android Workspace.text
-7) Type in some java script code and run it!
+In your "pharo" folder there is a Smalltalk workspace to do this. Proceed as follows:
 
-THE BROWSER
+3. Download Pharo from: http://www.pharo-project.org/pharo-download
+4. Install Pharo and open the Pharo image file
+5. Click on the background, from the popup-menu select Tools->File Browser
+6. Browse to the file "/pharo/Android-Workspace.st", select it and click "Filein"
+7. Now click on the background, from the popup-menu select "Workspace"
+8. Type: AndroidWorkspace new open
+9. Select this text with your mouse, right-click it and from the popup-menu choose "do it"
+10. A new windows opens where you can type in JavaScript code and run it!
 
-There is also a JavaScript browser in class RhinoDroidBrowser. Edit AndroidManifest.xml to compile 
-the browser. Then upload the file javascript/Hello.js to the device/emulator and open it in the app. 
-The browser allows code to be loaded from a file, either locally or over http (has not been tested yet).
-Note that there is an open method in the activity that can be used to open another JavaScript file.
-More examples will be provided. There may be security concerns, but it is really promising to have
-a browser that allows for loading lightweight app code over the network. Welcome to the html-less
-web for Android, runing JavaScript!
+Select any text you wish to evaluate, right-click it and from the popup-menu choose "Run on Android"
 
 Have fun!
 
 Micke (^_^)
+
+
+Addenddum from forked version
+git://github.com/jonasbeckman/RhinoDroid.git
+
+2009-12-08
+- Minor modifications to make run project "out of the box" from inside Eclipse
+- Changed SDK version to 1.5 for compatibility with existing real phones
+- Modified the README to make it easier to follow
+- Changed recommended Smalltalk version to Pharo (better for newbies, IMHO)
+
+Jonas

@@ -3,8 +3,6 @@ package miki.rhinodroid;
 import android.app.*;
 import android.os.*;
 import android.util.*;
-import android.widget.*;
-
 import java.io.*;
 import java.net.*;
 import java.util.concurrent.atomic.*;

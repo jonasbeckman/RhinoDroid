@@ -1,0 +1,11 @@
+CHANGES from forked version
+git://github.com/jonasbeckman/RhinoDroid.git
+
+2009-12-08
+- Minor modifications to make project run “out of the box” from inside Eclipse
+- Changed SDK version to 1.5 for compatibility with existing real phones
+- Modified README to make it easier to follow
+- Moved instructions for browser code to “README RhinoDroidBrowser” 
+- Changed recommended Smalltalk version to Pharo (better for newbies, IMHO)
+
+Jonas
