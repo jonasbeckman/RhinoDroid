@@ -53,15 +53,3 @@ Select any text you wish to evaluate, right-click it and from the popup-menu cho
 Have fun!
 
 Micke (^_^)
-
-
-Addenddum from forked version
-git://github.com/jonasbeckman/RhinoDroid.git
-
-2009-12-08
-- Minor modifications to make run project "out of the box" from inside Eclipse
-- Changed SDK version to 1.5 for compatibility with existing real phones
-- Modified the README to make it easier to follow
-- Changed recommended Smalltalk version to Pharo (better for newbies, IMHO)
-
-Jonas
