@@ -4,7 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0">
     <application android:label="RhinoDroidServer" android:icon="@drawable/icon">
-        <activity android:name="RhinoDroidB"
+        <activity android:name="RhinoDroidServer"
                   android:label="RhinoDroidServer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
